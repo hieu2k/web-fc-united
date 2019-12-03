@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body.hidden{
+    overflow: hidden;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden;
+}
+
+.header{
+    background:#353b48;
+    width: 100%;
+}
+
+.header .navbar .container{
+    position: relative;
+}
+
+.header .navbar .container a.navbar-brand.logo{
+    width: 148px;
+    transition: 0.2s;
+}
+
+.header .navbar .container a.navbar-brand.logo.show{
+    width: 208px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 40px 0;
+}
+
+.header .navbar .container a.navbar-brand.logo img{
+    width: 100%;
+}
+
+.header .navbar .container .btn-menu{
+    position: absolute;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.header .navbar .container .btn-menu.unshow{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header .navbar .container .btn-menu i.fa, 
+.header .navbar .container .btn-menu-close i.fa{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header .navbar .container .btn-menu-close{
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: translate(10px, -10px);
+    opacity: 0;
+    visibility: hidden;
+    transform: 0.4s;
+}
+
+.header .navbar .container .btn-menu-close.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrapper .navbar .container .collapse.navbar-collapse{
+    display: block;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+.wrapper .navbar .container .collapse.navbar-collapse.show{
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.header .navbar .container .collapse .navbar-nav{
+    width: 90%;
+    margin: auto;
+}
+
+.header .navbar .container .collapse .navbar-nav li.nav-item{
+    padding-left: 10px;
+}
+
+.header .navbar .container .collapse .navbar-nav li.nav-item .navbar-nav-child{
+    list-style: none;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: 0.3s;
+}
+
+.header .navbar .container .collapse .navbar-nav li.nav-item .navbar-nav-child.show{
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .navbar .container .collapse .navbar-nav li.nav-item .navbar-nav-child li.nav-item-child{
+    padding: 5px 10px;
+}
+
+.header .navbar .container .navbar-nav li.nav-item .navbar-nav-child li.nav-item-child:hover{
+    background: #34495e;
+}
+
+.header .navbar .container .navbar-nav li.nav-item .navbar-nav-child li.nav-item-child .nav-link-child{
+    font-size: 0.9rem;
+    color: #F5F6Fa;
+    text-decoration: none;
+    padding: 0px 40px;
+}
+
+.header .navbar .container .collapse .navbar-nav li.nav-item a.nav-link{
+    color: white;
+    font-size: 1.3rem;
+    position: relative;
+    transition: 0.3s;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header .navbar .container .collapse .navbar-nav li.nav-item a.nav-link::before{
+    content: "\f150";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%,-50%);
+    padding-right: 20px;
+}
+
+.header .navbar .container .collapse .navbar-nav li.nav-item a.nav-link:hover{
+    background: #34495e;
+}
+
+
+.header .navbar .container .collapse .navbar-nav li.nav-item:nth-child(5) a.nav-link::before{
+    content: ""!important;
+}
+
+.header .navbar .container .collapse .navbar-nav li.nav-item:nth-child(6) a.nav-link::before{
+    content: ""!important;
+}
+
+.header .navbar .collapse .form-inline{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    background: #f5f6fa;
+    border-radius: 40px;
+}
+
+
+.header .navbar .collapse .form-inline .btn-search{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-95%, -50%);
+    
+}
+
+.header .navbar .collapse .form-inline .btn-search i.fa{
+    font-size: 1.5rem;
+    color: #2f3640;
+}
+
+.header .navbar .collapse .form-inline .form-control{
+    width: 90%;
+    height: 50px;
+    background: #f5f6fa00;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+@media(min-width:992px){
+    .header{
+        position: relative;
+        z-index: 1030;
+    }
+
+    .header.fixed{
+        position: fixed;
+        width: 100%;
+    }
+
+    .header .navbar .container a.navbar-brand.logo{
+        width: 208px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header .navbar .container .collapse.navbar-collapse{
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+    }
+
+    .header .navbar .container .btn-menu{
+        display: none;
+    }
+
+    .header .navbar .container .collapse .navbar-nav{
+        margin: 0;
+        width: auto;
+    }
+
+    .header .navbar .container .collapse .navbar-nav li.nav-item{
+        position: relative;
+    }
+
+    .header .navbar .container .collapse .navbar-nav li.nav-item a.nav-link{
+        padding: 0 10px;
+    }
+
+    .header .navbar .container .collapse .navbar-nav li.nav-item .navbar-nav-child{
+        position: fixed;
+        top: 77px;
+        background: white;
+        height: auto!important;
+        z-index: 2;
+    }
+
+    /* .header .navbar .container .collapse .navbar-nav li.nav-item:hover .navbar-nav-child{
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+    } */
+
+    .header .navbar .container .bg-child{
+        position: fixed;
+        top: 0;
+        background: linear-gradient(45deg, rgba(0,0,0,0.9108018207282913) 0%, rgba(89,89,89,0.6811099439775911) 25%, rgba(0,0,0,1) 100%);
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+    }
+
+    .header .navbar .container .bg-child.show{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header .navbar .container .collapse .navbar-nav li.nav-item .navbar-nav-child::before{
+        content: "";
+        width: 0;
+        height: 0;
+        border: 12px solid rgb(255, 255, 255);
+        border-right-color: #00008000;
+        border-left-color: #00008000;
+        border-top-color: #00008000;
+        z-index: 0;
+        position: absolute;
+        top: -24px;
+        left: 30px;
+    }
+
+    .header .navbar .container .collapse .navbar-nav li.nav-item .navbar-nav-child .nav-item-child .nav-link-child{
+        color: #2980b9;
+    }
+
+    .header .navbar .container .collapse .navbar-nav li.nav-item a.nav-link{
+        font-size: 1rem;
+    }
+
+    .header .navbar .container .collapse .navbar-nav li.nav-item a.nav-link::before{
+        content: '';
+    }
+
+    .header .navbar .container .collapse .navbar-nav li.nav-item{
+        padding: 0;
+    }
+
+    .header .navbar .collapse .form-inline{
+        width: 20%;
+    }
+
+    .header .navbar .collapse .form-inline .form-control{
+        width: 50%;
+    }
+}
