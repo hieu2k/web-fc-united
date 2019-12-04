@@ -1,0 +1,182 @@
+.login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 428px;
+    height: 400px;
+    background: #FFF;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.login.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.login .title{
+    color: #e74c3c;
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    transform: translate(-50%, -4%);
+    font-size: 28px;
+    font-weight: 700;
+}
+.login .login-form{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+}
+
+.login .login-form input.email-login,
+.login .login-form input.passwrod-login {
+    display: block;
+    width: 85%;
+    height: 50px;
+    border-radius: 50px;
+    padding-left: 50px;
+    padding-right: 20px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: 0.3s;
+    background: #bdc3c7;
+}
+
+.login .login-form .email-login{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.login .login-form .label-login span.text-email-login,
+.login .login-form .label-login span.text-pass-login{
+    position: absolute;
+    top: 22%;
+    left: 15%;
+    transform: translate(-15%, -22%);
+    font-size: 18px;
+    font-weight: 600;
+    color: #ecf0f1;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.login .login-form .email-login:focus + .label-login span.text-email-login{
+    transform: translate(-15%, -20%) translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.login .login-form .label-login span.icon-user-login,
+.login .login-form .label-login span.icon-pass-login{
+    position: absolute;
+    top: 22%;
+    left: 5%;
+    transform: translate(-12%, -22%);
+    font-size: 21px;
+    color: #000;
+    z-index: 0;
+    transition: 0.4s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.login .login-form .email-login:focus + .label-login span.icon-user-login{
+    left: 12%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.login .login-form .label-login span.icon-user-login::before{
+    content: "\f007";
+    font-family: "FontAwesome";
+}
+
+.login .login-form .passwrod-login{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -44%);
+}
+
+.login .login-form .label-login span.text-pass-login{
+    top: 44%;
+    transform: translateY(-44%);
+}
+
+.login .login-form .passwrod-login:focus + .label-login span.text-pass-login{
+    transform: translate(-15%, -44%) translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.login .login-form .label-login span.icon-pass-login{
+    top: 44%;
+    transform: translateY(-44%);
+}
+
+.login .login-form .passwrod-login:focus + .label-login span.icon-pass-login{
+    left: 12%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.login .login-form .label-login span.icon-pass-login::before{
+    content: "\f023";
+    font-family: "FontAwesome";
+}
+
+.login .login-form .fooder-login{
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    transform: translate(-23%, -60%);
+}
+
+.login .login-form .fooder-login p{
+    display: inline;
+    margin-right: 20px;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #e74c3c;
+}
+
+.login .login-form .fooder-login span{
+    font-size: 13px;
+    color: #bdc3c7;
+}
+
+.login .login-form .btn-login{
+    position: absolute;
+    top: 75%;
+    left: 11%;
+    transform: translate(-11%, -75%);
+    background: #e74c3c;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+
+.login .login-form .btn-login:hover{
+    background: #34495e;
+}
+
+.login .login-form .btn-login span{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
